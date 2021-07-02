@@ -60,7 +60,7 @@ movieRouter.post('/',  async (req,res,next)=> {
         next(error)
     }
 })
-movieRouter.put('/:id', async (req,res,next)=> {
+movieRouter.put('/:movId', async (req,res,next)=> {
     try {
         const movies = await getmovies()
         const movieIdnex = movies.findIndex(u => u.id === req.params.id)
@@ -80,7 +80,7 @@ movieRouter.put('/:id', async (req,res,next)=> {
 
    
 })
-movieRouter.delete('/:id', async (req,res,next)=> {
+movieRouter.delete('/:movId', async (req,res,next)=> {
 
     try {
         let movies = await getmovies()
